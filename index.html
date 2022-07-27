@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUI Gpa Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+     <!-- Navbar -->
+
+     <header class="navbar">
+        <img src="./cui.png" alt="cuilogo">
+        <h2>Gpa Calculator</h2>
+     </header>
+
+     <!-- mainSection -->
+
+     <div class="main__container">
+
+        <!-- coursesInput -->
+          
+        <div class="input">
+           <input class="courses__input" id="coursesInput" type="number" placeholder="Enter No of courses">
+           <i class="fa-solid fa-arrow-right"></i>
+            
+          
+        </div>
+
+        <!-- Clear button -->
+
+        <div class="clear__btn">
+         <button class="btn" id="clear__btn">Clear</button>
+        </div>
+          
+        <!-- courses -->
+
+        <div class="all__courses" id="allCourses">
+
+            <!-- dummydata -->
+
+
+        </div>
+
+        <!-- calculatebutton -->
+
+        <div class="calc__btn">
+           <button class="calculate" id="calcGpa">Calculate</button>
+        </div>
+
+        <!-- Output_GPA -->
+        
+        <div class="output__GPA" id="outputDisplay">
+             <h1 id="gpaOutput">GPA : 3.89</h1>
+        </div>
+
+     </div>
+    
+     <script src="app.js"></script>
+
+</body>
+</html>

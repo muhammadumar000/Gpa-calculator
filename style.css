@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap");
+
+/* Css reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Baloo Bhai 2", cursive;
+  background-color: #fafffd;
+}
+
+/* NavBar */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 6rem;
+  width: 100%;
+  background: #3e4e76;
+}
+.navbar img {
+  padding-left: 2rem;
+  width: 300px;
+  height: 70px;
+}
+
+.navbar > h2 {
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  font-size: 32px;
+}
+
+/* mainsection  */
+
+.main__container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  /* border: 2px solid red; */
+  width: 100%;
+  min-height: 90vh;
+  margin-bottom: 2rem;
+}
+
+/* inputstyling */
+
+.input {
+  margin-top: 4rem;
+  position: relative;
+  /* border: 2px solid red; */
+}
+
+.courses__input::-webkit-outer-spin-button,
+.courses__input::-webkit-inner-spin-button{
+    appearance: none;
+}
+.courses__input {
+  width: 20rem;
+  height: 3rem;
+  border-radius: 10px;
+  background: rgba(62, 78, 118, 0.3);
+  font-family: Baloo Bhai 2;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 52px;
+  letter-spacing: 0em;
+  text-align: left;
+  border: none;
+  outline: none;
+  padding: 1rem;
+ 
+}
+
+
+
+.input > i {
+  position: absolute;
+  right: 10px;
+  top: 14px;
+  font-size: 1.4rem;
+  color: #3e4e76;
+  cursor: pointer;
+}
+
+.btn{
+  margin-top: 1rem;
+  background: #3e4e76;
+  border-radius: 13px;
+  height: 3rem;
+  width: 10rem;
+  color: #FAFFFD;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* courses styling  */
+
+.all__courses {
+  margin-top: 2rem;
+  display: grid;
+  min-width: 40%;
+  /* border: 2px solid blue; */
+  min-height: 1rem;
+  background: #d9d9d9;
+  border-radius: 46px;
+
+  grid-template-columns: 200px 150px 150px;
+  grid-template-rows: repeat(auto-fill, 80px);
+  justify-items: center;
+  padding: 1.3rem;
+  gap: 1rem;
+}
+label {
+  /* border: 2px solid orange; */
+  font-size: 1.2rem;
+  color: #3e4e76;
+}
+
+label > input {
+  display: block;
+  background: rgba(62, 78, 118, 0.3);
+  outline: none;
+  border: none;
+  padding: 1rem;
+}
+
+.courseName::placeholder {
+  color: #0000009c;
+}
+
+.courseName {
+  width: 10rem;
+  height: 2.5rem;
+  outline: none;
+  font-size: 0.9rem;
+}
+.gpa_crd {
+  height: 2.5rem;
+  width: 5rem;
+}
+
+/* calculate Button styling */
+
+.calculate {
+  margin-top: 2rem;
+  background: #3e4e76;
+  border-radius: 13px;
+  height: 3rem;
+  width: 10rem;
+  color: #FAFFFD;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+
+}
+
+/* output styling */
+
+.output__GPA{
+    margin-top: 2rem;
+    visibility: hidden;
+    width: 18rem;
+    height: 4rem;
+    background: #3e4e76;
+    border-radius: 15px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.output__GPA > h1{
+    color: #fafffd;
+    font-size: 1.5rem;
+}
+
+.display{
+    visibility: visible;
+}
+
+
+/* Media queries */
+
+@media (max-width:630px){
+  .all__courses{
+    /* width: 80%; */
+    grid-template-columns: 300px;
+    grid-template-rows: repeat(auto-fill,84px);
+    border-radius: 10px;
+    justify-items: unset;
+  }
+
+  .navbar > h2{
+    font-size: 22px;
+  }
+
+  .navbar img {
+    padding-left: 1rem;
+    width: 245px;
+    height: 60px;
+}
+  
+}
+
+@media (max-width:390px){
+  .all__courses{
+    width: 74%;
+    
+  }
+
+  .navbar > h2{
+    font-size: 18px;
+  }
+
+
+  .courses__input{
+    width: 16rem;
+  }
+
+  .navbar img {
+    width: 216px;
+    height: 64px;
+}
+
+  
+}
