@@ -2,8 +2,9 @@
 
 let noOfCourses;
 const coursesInput = document.getElementById("coursesInput");
-coursesInput.addEventListener("input", (event) => {
+coursesInput.addEventListener("change", (event) => {
   noOfCourses = event.target.value;
+
 });
 
 let toAdd = "";
@@ -42,6 +43,7 @@ addCoursesBtn.addEventListener("click", () => {
 
 const clear = document.getElementById("clear__btn");
 clear.addEventListener("click", () => {
+    noOfCourses = "";
   toAdd = "";
   Gpa = [];
   crdHrs = [];
@@ -68,6 +70,7 @@ const calcGpa = (e) => {
 
   let gpa = e;
   Gpa.push(gpa);
+  
 
 };
 

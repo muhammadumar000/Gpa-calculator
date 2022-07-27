@@ -50,7 +50,7 @@ body {
   flex-direction: column;
   /* border: 2px solid red; */
   width: 100%;
-  min-height: 90vh;
+  min-height: 80vh;
   margin-bottom: 2rem;
 }
 
@@ -191,7 +191,25 @@ label > input {
     visibility: visible;
 }
 
+/* footer */
 
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  background-color: #3e4e76;
+  color: #FAFFFD;
+}
+
+footer > h1{
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+footer > h1 > span {
+  color: red;
+}
 /* Media queries */
 
 @media (max-width:630px){
