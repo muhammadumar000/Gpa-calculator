@@ -2,7 +2,7 @@
 - Live Site: https://cui-gpacalculator.vercel.app/
 
 # Technologies Used: 
-- HTMl5
+- HTML5
 - CSS3
 - JavaScript
 - Figma for designing
