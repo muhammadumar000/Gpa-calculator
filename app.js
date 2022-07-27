@@ -11,6 +11,9 @@ let toAdd = "";
 const addCoursesBtn = coursesInput.nextElementSibling;
 addCoursesBtn.addEventListener("click", () => {
   if (noOfCourses) {
+
+    const clearBtn = document.getElementById('clearBtn');
+    clearBtn.classList.add('show');
     const allCourses = document.getElementById("allCourses");
 
     for (let i = 0; i < noOfCourses; i++) {
@@ -54,6 +57,10 @@ clear.addEventListener("click", () => {
 
   const outputDisplay = document.getElementById('outputDisplay');
      outputDisplay.classList.remove('display');
+
+     
+    const clearBtn = document.getElementById('clearBtn');
+    clearBtn.classList.remove('show');
 
 });
 

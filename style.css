@@ -66,6 +66,14 @@ body {
 .courses__input::-webkit-inner-spin-button{
     appearance: none;
 }
+
+.clear__btn{
+  display: none;
+}
+
+.show {
+  display: block;
+}
 .courses__input {
   width: 20rem;
   height: 3rem;
