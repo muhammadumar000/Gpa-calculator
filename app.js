@@ -97,7 +97,7 @@ calculatedGpa.addEventListener("click", () => {
         gradeCredit += Gpa[i]*crdHrs[i];
         
     }
-
+// converting calculated grade credit into GPA
     let GPA = 0;
     if(credits && gradeCredit)
     {
