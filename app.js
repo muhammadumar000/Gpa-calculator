@@ -1,20 +1,16 @@
 // taking courses input
 
-let noOfCourses;
-const coursesInput = document.getElementById("coursesInput");
-coursesInput.addEventListener("change", (event) => {
-  noOfCourses = event.target.value;
 
-});
-
-let toAdd = "";
-const addCoursesBtn = coursesInput.nextElementSibling;
-addCoursesBtn.addEventListener("click", () => {
+function add_courses(){
   if (noOfCourses) {
 
     const clearBtn = document.getElementById('clearBtn');
+    
     clearBtn.classList.add('show');
     const allCourses = document.getElementById("allCourses");
+    allCourses.style.display = "grid";
+    
+    
 
     for (let i = 0; i < noOfCourses; i++) {
       toAdd += `
@@ -42,23 +38,51 @@ addCoursesBtn.addEventListener("click", () => {
   } else {
     alert("Input cannot be empty!");
   }
+}
+
+let noOfCourses;
+const coursesInput = document.getElementById("coursesInput");
+coursesInput.addEventListener("change", (event) => {
+  noOfCourses = event.target.value;
+
 });
+
+coursesInput.addEventListener("keyup", (event) => {
+  if(event.key == "Enter"){
+    add_courses();
+  }
+})
+
+
+let toAdd = "";
+const addCoursesBtn = coursesInput.nextElementSibling;
+addCoursesBtn.addEventListener("click", () => {
+    add_courses();
+});
+
+
 
 const clear = document.getElementById("clear__btn");
 clear.addEventListener("click", () => {
-    noOfCourses = "";
+  noOfCourses = "";
   toAdd = "";
   Gpa = [];
   crdHrs = [];
+
+  const coursesInput = document.getElementById("coursesInput");
+  coursesInput.value = "";
   const allCourses = document.getElementById("allCourses");
   allCourses.innerHTML = toAdd;
+
+  allCourses.style.display = "none";
+  
+  
   const gpaOuput = document.getElementById('gpaOutput');
   gpaOuput.innerHTML = "";
 
   const outputDisplay = document.getElementById('outputDisplay');
      outputDisplay.classList.remove('display');
 
-     
     const clearBtn = document.getElementById('clearBtn');
     clearBtn.classList.remove('show');
 
@@ -83,6 +107,10 @@ const calcGpa = (e) => {
 
 const calculatedGpa = document.getElementById("calcGpa");
 calculatedGpa.addEventListener("click", () => {
+
+  if(!noOfCourses){
+    alert("Input Cannot be empty");
+  }
 
  
   let gradeCredit = 0;

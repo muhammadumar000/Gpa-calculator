@@ -1,72 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comsats Gpa Calculator</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- HTML Meta Tags -->
+   <title>Comsats Gpa Calculator</title>
+   <meta name="description"
+      content="Discover the COMSATS GPA Calculator – your hassle-free solution for calculating Grade Point Averages. Easily determine your academic standing with this user-friendly tool. Efficient, accurate, and designed for simplicity. Make GPA calculations a breeze with our straightforward platform. Designed and Coded by Muhammad Umar, your go-to resource for stress-free grade assessments">
+
+   <!-- Facebook Meta Tags -->
+   <meta property="og:url" content="https://cui-gpacalculator.vercel.app/">
+   <meta property="og:type" content="website">
+   <meta property="og:title" content="Comsats Gpa Calculator">
+   <meta property="og:description"
+      content="Discover the COMSATS GPA Calculator – your hassle-free solution for calculating Grade Point Averages. Easily determine your academic standing with this user-friendly tool. Efficient, accurate, and designed for simplicity. Make GPA calculations a breeze with our straightforward platform. Powered by Muhammad Umar, your go-to resource for stress-free grade assessments">
+   <meta property="og:image"
+      content="https://opengraph.b-cdn.net/production/documents/5011851e-9fb7-4f7a-962e-407fd65aae69.png?token=1bsh-Amja5M9vLMJlBmvQOZE9EA195iLBTnWh9ZVNPY&height=788&width=940&expires=33242936413">
+
+   <!-- Twitter Meta Tags -->
+   <meta name="twitter:card" content="summary_large_image">
+   <meta property="twitter:domain" content="cui-gpacalculator.vercel.app">
+   <meta property="twitter:url" content="https://cui-gpacalculator.vercel.app/">
+   <meta name="twitter:title" content="Comsats Gpa Calculator">
+   <meta name="twitter:description"
+      content="Discover the COMSATS GPA Calculator – your hassle-free solution for calculating Grade Point Averages. Easily determine your academic standing with this user-friendly tool. Efficient, accurate, and designed for simplicity. Make GPA calculations a breeze with our straightforward platform. Powered by Muhammad Umar, your go-to resource for stress-free grade assessments">
+   <meta name="twitter:image"
+      content="https://opengraph.b-cdn.net/production/documents/5011851e-9fb7-4f7a-962e-407fd65aae69.png?token=1bsh-Amja5M9vLMJlBmvQOZE9EA195iLBTnWh9ZVNPY&height=788&width=940&expires=33242936413">
+
+   <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-     <!-- Navbar -->
+   <!-- Navbar -->
 
-     <header class="navbar">
-        <img src="./cui.png" alt="cuilogo">
-        <h2>Gpa Calculator</h2>
-     </header>
+   <header class="navbar">
+      <img src="./cui.png" alt="cuilogo">
+      <h2>Gpa Calculator</h2>
+   </header>
 
-     <!-- mainSection -->
+   <!-- mainSection -->
 
-     <div class="main__container">
+   <div class="main__container">
 
-        <!-- coursesInput -->
-          
-        <div class="input">
-           <input class="courses__input" id="coursesInput" type="number" placeholder="Enter No of courses">
-           <i class="fa-solid fa-arrow-right"></i>
-            
-          
-        </div>
+      <!-- coursesInput -->
 
-        <!-- Clear button -->
+      <div class="input">
+         <input class="courses__input" id="coursesInput" type="number" placeholder="Enter No of courses">
+         <i class="fa-solid fa-arrow-right"></i>
 
-        <div class="clear__btn" id="clearBtn">
+
+      </div>
+
+      <!-- Clear button -->
+
+      <div class="clear__btn" id="clearBtn">
          <button class="btn" id="clear__btn">Clear</button>
-        </div>
-          
-        <!-- courses -->
+      </div>
 
-        <div class="all__courses" id="allCourses">
+      <!-- courses -->
 
-            <!-- dummydata -->
+      <div class="all__courses" id="allCourses">
+
+         <!-- dummydata -->
 
 
-        </div>
+      </div>
 
-        <!-- calculatebutton -->
+      <!-- calculatebutton -->
 
-        <div class="calc__btn">
-           <button class="calculate" id="calcGpa">Calculate</button>
-        </div>
+      <div class="calc__btn">
+         <button class="calculate" id="calcGpa">Calculate</button>
+      </div>
 
-        <!-- Output_GPA -->
-        
-        <div class="output__GPA" id="outputDisplay">
-             <h1 id="gpaOutput">GPA : 3.89</h1>
-        </div>
+      <!-- Output_GPA -->
 
-     </div>
+      <div class="output__GPA" id="outputDisplay">
+         <h1 id="gpaOutput">GPA : 3.89</h1>
+      </div>
 
-     <footer>
+   </div>
+
+   <footer>
       <h1>Made with <span>❤</span> by Muhammad Umar </h1>
-     </footer>
-    
-     <script src="app.js"></script>
-    <script>
-        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-    </script>
-    <script defer src="/_vercel/insights/script.js"></script>
+   </footer>
+
+   <script src="app.js"></script>
+
 
 </body>
+
 </html>

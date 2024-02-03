@@ -130,6 +130,7 @@ body {
   justify-items: center;
   padding: 1.3rem;
   gap: 1rem;
+  display: none;
 }
 label {
   /* border: 2px solid orange; */
