@@ -34,6 +34,9 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
       integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+
 </head>
 
 <body>
@@ -48,49 +51,133 @@
 
    <div class="main__container">
 
-      <!-- coursesInput -->
+      <div class="calculator-type">
+         <label for="calculatorType">Choose Calculator Type:</label>
+         <select id="calculatorType" onchange="changeCalculatorType()">
+            <option style="color: #1C5BA9; " value="semesterGpa">Semester GPA Calculator</option>
+            <option style="color: #1C5BA9; " value="internalMarks">Internal Marks Calculator</option>
+         </select>
+      </div>
 
-      <div class="input">
-         <input class="courses__input" id="coursesInput" type="number" placeholder="Enter No of courses">
-         <i class="fa-solid fa-arrow-right"></i>
+      <hr/>
 
+      <div id="semesterGpaCalculator">
+
+         <h3 class="heading">Semester GPA Calculator</h3>
+
+         <!-- coursesInput -->
+
+
+         <div class="input">
+            <input class="courses__input" id="coursesInput" type="number" placeholder="Enter No of courses">
+            <button id="submit_btn">Submit</button>
+
+
+         </div>
+
+         <!-- Clear button -->
+
+         
+
+         <!-- courses -->
+
+         <div class="all_courses" id="allCourses">
+
+         </div>
+
+         <!-- calculatebutton -->
+
+         <div class="calc__btn">
+            <button class="calculate" id="calcGpa">Calculate</button>
+            <button class="btn" id="clear__btn" style="display: none;">Calculate Again</button>
+         </div>
+
+         <!-- Output_GPA -->
+
+         <div class="result" id="semRes" style="display: none;">
+            <h3 class="heading" style="margin-top: 1rem;">Results</h3>
+            <hr style="width: 100%;"/>
+         </div>
+
+         <div class="output__GPA" id="outputDisplay">
+            <h1 id="gpaOutput">GPA : 3.89</h1>
+         </div>
 
       </div>
 
-      <!-- Clear button -->
 
-      <div class="clear__btn" id="clearBtn">
-         <button class="btn" id="clear__btn">Clear</button>
-      </div>
+      <!-- Internal Marks Calculator Section -->
+      <div id="internalMarksCalculator" class="calculator-section" style="display: none;">
+         <!-- Internal Marks Calculator components can be added here -->
+         <!-- For example: input fields, buttons, etc. -->
 
-      <!-- courses -->
+         <h3 class="heading">Internal Marks Calculator</h3>
 
-      <div class="all__courses" id="allCourses">
+         
 
-         <!-- dummydata -->
+         <!-- Number of Quizzes Input -->
+         <div class="quizzes-input">
+            <label for="numQuizzes">Number of Quizzes:</label>
+            <input type="number" id="numQuizzes" placeholder="Enter number of quizzes">
+         </div>
 
 
-      </div>
+         <div class="quiz-details">
+            <!-- Quiz Details -->
+         </div>
 
-      <!-- calculatebutton -->
+         <!-- No of Assignments  -->
+         <div class="assign-input">
+            <label for="numAssignments">Number of Assignments:</label>
+            <input type="number" id="numAssigns" placeholder="Enter number of Assignments">
+         </div>
 
-      <div class="calc__btn">
-         <button class="calculate" id="calcGpa">Calculate</button>
-      </div>
+         <div class="Assign-details">
 
-      <!-- Output_GPA -->
+         </div>
 
-      <div class="output__GPA" id="outputDisplay">
-         <h1 id="gpaOutput">GPA : 3.89</h1>
+         <!-- Number of Midterms Input -->
+
+         <div class="Midterm-details">
+            <!-- Midterm Details -->
+            
+            <h3 style="font-size: 1.1rem; color: #1C5BA9; ">Mid Term Marks:</h1>
+            <label for="midtermObtainedMarks">Obtained Marks</label>
+            <input type="number" min = "0"  id="midtermObtainedMarks">
+
+            <label for="midtermTotalMarks">Total Marks</label>
+            <input type="number" min = "0" value="25" id="midtermTotalMarks">
+
+         </div>
+
+         <div class="calc__btn">
+            <button  class="calculate" id="calc_internals">Calculate</button>
+            <button  class="calculate" id="clear_internals" style="display: none;">Calculate Again</button>
+         </div>
+
+         <!-- Output_GPA -->
+
+         <div class="result" id="internalRes" style="display: none;">
+            <h3 class="heading" style="margin-top: 1rem;">Results</h3>
+            <hr style="width: 100%;"/>
+         </div>
+
+         <div class="output__GPA" id="outputDisplayInternal">
+            <h1 id="internalOutput"></h1>
+         </div>
+
       </div>
 
    </div>
 
+   </div>
+
    <footer>
-      <h1>Made with <span>❤</span> by Muhammad Umar </h1>
+      <h1>Designed and Developed by Umar & Muquit</h1>
    </footer>
 
    <script src="app.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
 
 
 </body>
