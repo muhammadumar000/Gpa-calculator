@@ -204,7 +204,7 @@ hr {
   min-height: 1rem;
   /* background: #d9d9d9; */
   /* border-radius: 46px; */
-  grid-template-columns: 230px 150px 150px;
+  grid-template-columns: 50% 25% 25%;
   grid-template-rows: repeat(auto-fill, 80px);
   /* justify-items: center; */
   /* padding: 1.3rem; */
@@ -212,10 +212,15 @@ hr {
   display: none;
 }
 
+.courseLabel{
+  width: 90%;
+}
+
 label {
   /* border: 2px solid orange; */
   font-size: 1.2rem;
   color: #1C5BA9;
+  /* width: 90%; */
 }
 
 label>input {
@@ -236,6 +241,7 @@ label>input {
   outline: none;
   font-size: 0.9rem;
   border-radius: 6px;
+  width: inherit;
 
 }
 
@@ -267,6 +273,7 @@ label>input {
   justify-content: space-evenly;
   align-items: flex-end;
   width: 100%;
+  margin-top: 1rem;
 }
 
 
@@ -274,7 +281,6 @@ label>input {
 /* output styling */
 
 .output__GPA {
-  visibility: hidden;
   width: 18rem;
   height: 4rem;
   background: transparent;
@@ -288,13 +294,13 @@ label>input {
 
 }
 
-.output__GPA>h1 {
+.output__GPA > h1 {
   color: #1C5BA9;
   font-size: 1.5rem;
 }
 
 .display {
-  visibility: visible;
+  display: block;
 }
 
 /* Internal calculator */
@@ -374,7 +380,7 @@ label>input {
 .quiz,
 .Assign,
 .Midterm-details {
-  margin-top: 1rem;
+  margin-block: 1.3rem;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -494,6 +500,9 @@ footer>h1>span {
   .heading{
     font-size: 1.2rem;
   }
+  .Midterm-details, .quiz, .Assign{
+    align-items: center;
+  }
 
 }
 
@@ -527,6 +536,10 @@ footer>h1>span {
   }
   .heading{
     font-size: 1.2rem;
+  }
+
+  .Midterm-details, .quiz, .Assign{
+    align-items: center;
   }
 
 }

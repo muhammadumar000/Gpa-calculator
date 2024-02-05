@@ -85,12 +85,7 @@
 
          </div>
 
-         <!-- calculatebutton -->
-
-         <div class="calc__btn">
-            <button class="calculate" id="calcGpa">Calculate</button>
-            <button class="btn" id="clear__btn" style="display: none;">Calculate Again</button>
-         </div>
+        
 
          <!-- Output_GPA -->
 
@@ -99,8 +94,15 @@
             <hr style="width: 100%;"/>
          </div>
 
-         <div class="output__GPA" id="outputDisplay">
+         <div class="output__GPA" id="outputDisplay" style="display: none;">
             <h1 id="gpaOutput">GPA : 3.89</h1>
+         </div>
+
+          <!-- calculatebutton -->
+
+          <div class="calc__btn">
+            <button class="calculate" id="calcGpa">Calculate</button>
+            <button class="btn" id="clear__btn" style="display: none;">Calculate Again</button>
          </div>
 
       </div>
@@ -138,10 +140,14 @@
 
          <!-- Number of Midterms Input -->
 
+         <div class="result" >
+            <hr style="width: 100%;"/>
+            <h3 class="heading" style="margin-top: 1rem;">Mid Term Marks</h3>
+         </div>
+
          <div class="Midterm-details">
             <!-- Midterm Details -->
-            
-            <h3 style="font-size: 1.1rem; color: #1C5BA9; ">Mid Term Marks:</h1>
+   
             <label for="midtermObtainedMarks">Obtained Marks</label>
             <input type="number" min = "0"  id="midtermObtainedMarks">
 
@@ -150,10 +156,6 @@
 
          </div>
 
-         <div class="calc__btn">
-            <button  class="calculate" id="calc_internals">Calculate</button>
-            <button  class="calculate" id="clear_internals" style="display: none;">Calculate Again</button>
-         </div>
 
          <!-- Output_GPA -->
 
@@ -162,8 +164,13 @@
             <hr style="width: 100%;"/>
          </div>
 
-         <div class="output__GPA" id="outputDisplayInternal">
+         <div class="output__GPA" id="outputDisplayInternal" style="display: none;">
             <h1 id="internalOutput"></h1>
+         </div>
+
+         <div class="calc__btn">
+            <button  class="calculate" id="calc_internals">Calculate</button>
+            <button  class="calculate" id="clear_internals" style="display: none;">Calculate Again</button>
          </div>
 
       </div>
