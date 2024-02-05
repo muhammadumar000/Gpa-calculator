@@ -100,9 +100,9 @@ body {
 }
 
 .calculator-type select:hover {
-  background-color: #3e4e76;
+  background-color: #1C5BA9;
   color: #fafffd;
-  border-color: #2c3e5a;
+  border-color: #1C5BA9;
 }
 
 .calculator-type select option {
