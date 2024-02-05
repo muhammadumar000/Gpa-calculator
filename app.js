@@ -312,10 +312,20 @@ calc_internal.addEventListener("click", () => {
 
   for (let i = 0; i < numAssigns; i++) {
     const obt_assign_marks = document.getElementById(`AssignmentObtainedMarks${i + 1}`);
-    totalObtainedAssignMarks += parseFloat(obt_assign_marks.value);
-
     const tot_assign_mark = document.getElementById(`AssignmentTotalMarks${i + 1}`);
+
+    if (parseFloat(obt_assign_marks.value) > parseFloat(tot_assign_mark.value)) {
+      console.log("Im here")
+      notify("error", "Obtained Marks Cannot be Greater than Total Marks")
+      clear_internal_marks()
+      return;
+    }
+    
+    
+    totalObtainedAssignMarks += parseFloat(obt_assign_marks.value);
     totalAssignMarks += parseFloat(tot_assign_mark.value);
+
+    
 
     assignMarks = (totalObtainedAssignMarks / totalAssignMarks) * 12.5;
     console.log(assignMarks)
