@@ -196,21 +196,13 @@ calculatedGpa.addEventListener("click", () => {
     // outputDisplay.classList.remove('display');
 
     calculatedGpa.style.display = "none";
-
-
-
   }
   else {
 
     notify("error", "Invalid Grades Entered")
     clear_courses()
   }
-
-
 });
-
-
-// Add this code to your existing JavaScript file or script tag
 
 // Get the element references
 const numQuizzesInput = document.getElementById("numQuizzes");
@@ -333,6 +325,12 @@ calc_internal.addEventListener("click", () => {
 
   const midtermObtMarks = parseFloat(document.getElementById("midtermObtainedMarks").value);
   const midtermTotMarks = parseFloat(document.getElementById("midtermTotalMarks").value);
+
+  if(midtermObtMarks > midtermTotMarks){
+    notify("error", "Obtained Marks Cannot be greater than Total Marks")
+    clear_internal_marks()
+    return;
+  }
 
   const midtermMarks = (midtermObtMarks / midtermTotMarks) * 25;
 
